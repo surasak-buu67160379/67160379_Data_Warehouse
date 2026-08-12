@@ -48,8 +48,11 @@ Name: นายสุรศักดิ์ นึกรักษ์
 เหตุผลหลัก:
 
 1.O0007: จำนวนสั่งซื้อติดลบ (qty = -2) -> Invalid Record Rules
+
 2.O0021: ส่วนลดเกิน 100% (discount_pct = 150) -> Invalid Record Rules
+
 3.O0034: รูปแบบวันที่ไม่ถูกต้อง (order_date = 'not-a-date') -> Invalid Record Rules
+
 4.O0091: ราคาต่อหน่วยติดลบ (unit_price = -100.0) -> Invalid Record Rules
 
 ## 4. ETL Validation
