@@ -24,13 +24,19 @@ Name: นายสุรศักดิ์ นึกรักษ์
 - Deduplication: กำจัดแถวซ้ำโดยยึด customer_id และ order_id เป็นหลัก
 - Date Standardization: แปลงวันที่ทุกสไตล์ให้อยู่ในรูปแบบมาตรฐานสากล YYYY-MM-DD 
 - Text Normalization:
+  
             1.ใช้ Province Mapping Dict แปลงชื่อจังหวัดหลากรูปแบบให้เป็นชื่อภาษาอังกฤษมาตรฐาน (เช่น Bangkok, Chonburi, Rayong)
+  
             2.ปรับแต่งค่า status ให้เป็นตัวพิมพ์เล็กทั้งหมดและตัด Space ส่วนเกิน
+  
 - Missing Value Imputation: เติมค่า Default ให้กับข้อมูลที่ขาดหาย (email เติม unknown@example.com, province เติม Unknown)
 - Type Casting: ลบเครื่องหมาย , ในราคาของสินค้า แล้วแปลงประเภทข้อมูลเป็น float
 - Filtering & Data Validation:
+  
             1.แยกข้อมูลที่ผิดกฎธุรกิจเข้าตาราง rejects.csv
+  
             2.คัดกรองเอาเฉพาะออเดอร์ที่มีสถานะชำระเงินสำเร็จ (paid และ completed) ไปคำนวณยอดขาย
+
 - Business Calculations:
             1.gross_amount = qty * unit_price
             2.discount_amount = gross_amount * (discount_pct / 100)
@@ -40,10 +46,14 @@ Name: นายสุรศักดิ์ นึกรักษ์
 จำนวน:4 รายการ
 
 เหตุผลหลัก:
-1.O0007: จำนวนสั่งซื้อติดลบ (qty = -2) -> Invalid Record Rules
-2.O0021: ส่วนลดเกิน 100% (discount_pct = 150) -> Invalid Record Rules
-3.O0034: รูปแบบวันที่ไม่ถูกต้อง (order_date = 'not-a-date') -> Invalid Record Rules
-4.O0091: ราคาต่อหน่วยติดลบ (unit_price = -100.0) -> Invalid Record Rules
+
+        1.O0007: จำนวนสั่งซื้อติดลบ (qty = -2) -> Invalid Record Rules
+
+        2.O0021: ส่วนลดเกิน 100% (discount_pct = 150) -> Invalid Record Rules
+
+        3.O0034: รูปแบบวันที่ไม่ถูกต้อง (order_date = 'not-a-date') -> Invalid Record Rules
+
+        4.O0091: ราคาต่อหน่วยติดลบ (unit_price = -100.0) -> Invalid Record Rules
 
 ## 4. ETL Validation
 - Valid transformed rows: 100 รายการ
