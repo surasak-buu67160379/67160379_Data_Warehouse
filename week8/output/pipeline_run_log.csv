@@ -1,0 +1,5 @@
+run_key,batch,started_at,ended_at,rows_read,rows_valid,rows_loaded,rows_rejected,rows_duplicated,status
+1,orders_batch_1,2026-08-18T16:27:41.157216,2026-08-18T16:27:42.836437,420,389,389,31,0,success
+2,orders_batch_1,2026-08-18T16:27:42.893274,2026-08-18T16:27:43.487912,420,389,0,31,0,success
+3,orders_batch_2,2026-08-18T16:27:43.576475,2026-08-18T16:27:44.428392,424,386,386,37,0,success
+4,orders_batch_3,2026-08-18T16:27:44.617481,2026-08-18T16:27:45.853264,424,386,385,35,0,success
