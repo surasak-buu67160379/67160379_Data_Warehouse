@@ -1,9 +1,0 @@
-__pycache__/
-*.py[cod]
-.venv/
-venv/
-*.db
-output/
-rejects.csv
-.DS_Store
-Thumbs.db
