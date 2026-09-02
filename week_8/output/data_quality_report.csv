@@ -1,0 +1,8 @@
+Table,Total_Rows,Missing_Values,Duplicates
+Customers_Before,163,5,0
+Products_Before,40,0,0
+Orders_Before,752,2258,2
+Customers_After,160,5,0
+Products_After,40,0,0
+Orders_After,750,2252,0
+Integrated_Data,751,2372,1
